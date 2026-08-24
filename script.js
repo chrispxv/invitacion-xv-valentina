@@ -79,7 +79,7 @@ function updateCountdown() {
   const minutes = Math.floor((distance % 3_600_000) / 60_000);
   const seconds = Math.floor((distance % 60_000) / 1_000);
 
-  document.querySelector("#days").textContent = pad(days, 3);
+  document.querySelector("#days").textContent = String(days);
   document.querySelector("#hours").textContent = pad(hours);
   document.querySelector("#minutes").textContent = pad(minutes);
   document.querySelector("#seconds").textContent = pad(seconds);
