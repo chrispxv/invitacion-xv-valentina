@@ -1,16 +1,25 @@
 :root {
-  --ivory: #fbf7f3;
-  --cream: #f4e9e4;
-  --blush: #e5c2c1;
-  --dusty-rose: #bd7f89;
-  --rose-dark: #9f5f6d;
-  --wine: #79394a;
-  --deep-wine: #4f2430;
-  --champagne: #b7995d;
-  --champagne-light: #d7c08e;
-  --ink: #392c2d;
-  --muted: #716266;
-  --paper: #fffdf9;
+  --wine-deep: #810041;
+  --magenta: #a90156;
+  --fuchsia: #d30069;
+  --hot-pink: #fe0180;
+  --pink: #ff3d9e;
+  --soft-pink: #ff67b4;
+  --light-pink: #ff95cc;
+  --blush-pink: #fdb9e0;
+  --pale-pink: #ffe0ef;
+  --ivory: #fff9fb;
+  --cream: #ffeaf4;
+  --blush: #fdb9e0;
+  --dusty-rose: #ff67b4;
+  --rose-dark: #d30069;
+  --wine: #a90156;
+  --deep-wine: #810041;
+  --champagne: #d6b36a;
+  --champagne-light: #e8d39c;
+  --ink: #441527;
+  --muted: #755564;
+  --paper: #fffdfd;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Manrope", Arial, sans-serif;
   --script: "Parisienne", "Brush Script MT", cursive;
@@ -18,14 +27,14 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: #dfd0c9; }
+html { scroll-behavior: smooth; background: #f3bfd8; }
 body {
   min-width: 320px;
   margin: 0;
   color: var(--ink);
   background:
     radial-gradient(circle at 50% 0%, rgba(255,255,255,.94), transparent 36rem),
-    linear-gradient(90deg, #d9c8c1, #eee4df 50%, #d9c8c1);
+    linear-gradient(90deg, #efbad3, #fde9f3 50%, #efbad3);
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.7;
@@ -522,6 +531,182 @@ button { color: inherit; }
 .finale-monogram { position: relative; box-shadow: 0 0 0 5px rgba(183,153,93,.05); }
 .finale-monogram::before, .finale-monogram::after { content: ""; position: absolute; top: 50%; width: 46px; height: 1px; background: linear-gradient(90deg, transparent, var(--champagne)); }
 .finale-monogram::before { right: calc(100% + 14px); }.finale-monogram::after { left: calc(100% + 14px); transform: scaleX(-1); }
+
+/* Valentina fuchsia palette — sampled from the supplied reference */
+body {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.96), transparent 34rem),
+    linear-gradient(90deg, #efb7d2, #fdebf4 50%, #efb7d2);
+}
+.invitation-shell { background: var(--ivory); box-shadow: 0 0 74px rgba(129,0,65,.2); }
+.eyebrow { color: var(--magenta); }
+.section-title { color: var(--wine-deep); }
+.script-title { color: var(--magenta); }
+.script-kicker { color: var(--fuchsia); }
+.skip-link { background: var(--wine-deep); }
+
+.floral-corner {
+  --petal-a: rgba(255,149,204,.52);
+  --petal-b: rgba(255,61,158,.22);
+  color: var(--fuchsia);
+  opacity: .58;
+  background:
+    radial-gradient(circle, var(--champagne) 0 3px, transparent 4px) 2px 83px/74px 74px no-repeat,
+    repeating-conic-gradient(from 4deg, var(--petal-a) 0 7deg, var(--petal-b) 7deg 11deg, transparent 11deg 29deg) 2px 83px/74px 74px no-repeat,
+    radial-gradient(circle, var(--magenta) 0 2px, transparent 3px) 69px 112px/48px 48px no-repeat,
+    repeating-conic-gradient(from 11deg, rgba(253,185,224,.6) 0 8deg, rgba(211,0,105,.16) 8deg 12deg, transparent 12deg 33deg) 69px 112px/48px 48px no-repeat;
+}
+.floral-corner i { background: rgba(255,224,239,.26); }
+.floral-corner b { background: rgba(255,224,239,.58); }
+.floral-corner--opening-left { color: var(--magenta); opacity: .66; }
+.floral-corner--opening-right { color: var(--fuchsia); opacity: .62; }
+.floral-corner--story-top { color: var(--soft-pink); opacity: .5; }
+.floral-corner--story-bottom { color: var(--magenta); opacity: .48; }
+.floral-corner--countdown-left { left: -35px; top: 4%; transform: rotate(-18deg) scale(.86); color: var(--fuchsia); opacity: .38; }
+.floral-corner--countdown-right { right: -36px; bottom: 1%; transform: rotate(164deg) scale(.82); color: var(--soft-pink); opacity: .38; }
+.floral-corner--event-left { left: -34px; top: 12%; transform: rotate(-18deg) scale(.86); color: var(--magenta); opacity: .38; }
+.floral-corner--event { color: var(--fuchsia); opacity: .36; }
+.floral-corner--dress-left { left: -35px; bottom: 2%; transform: rotate(-16deg) scale(.83); color: var(--fuchsia); opacity: .38; }
+.floral-corner--dress-right { right: -36px; top: 1%; transform: rotate(164deg) scale(.8); color: var(--magenta); opacity: .35; }
+.floral-corner--letter-left { left: -33px; top: 2%; transform: rotate(-14deg) scale(.84); color: var(--soft-pink); opacity: .38; }
+.floral-corner--letter { color: var(--fuchsia); opacity: .36; }
+.floral-corner--gift-left { left: -34px; bottom: -10px; transform: rotate(-17deg) scale(.88); }
+.floral-corner--gift-right { right: -35px; top: -8px; transform: rotate(164deg) scale(.88); }
+.floral-corner--dark { --petal-a: rgba(255,103,180,.26); --petal-b: rgba(214,179,106,.18); color: var(--champagne); opacity: .58; }
+.floral-corner--dark i { background: rgba(129,0,65,.12); }
+.floral-corner--dark b { background: rgba(169,1,86,.35); }
+.floral-corner--rsvp-left { color: var(--magenta); opacity: .44; }
+.floral-corner--rsvp-right { color: var(--fuchsia); opacity: .4; }
+.floral-corner--final-left { color: var(--magenta); opacity: .5; }
+.floral-corner--final-right { color: var(--fuchsia); opacity: .48; }
+
+.gold-flecks--light { opacity: .48; }
+.gold-flecks--light i:nth-child(1) { left: 8%; top: 13%; }.gold-flecks--light i:nth-child(2) { right: 9%; top: 28%; }.gold-flecks--light i:nth-child(3) { left: 13%; bottom: 14%; }.gold-flecks--light i:nth-child(4) { right: 18%; bottom: 8%; }.gold-flecks--light i:nth-child(5) { right: 39%; top: 8%; }
+.gold-flecks--gift { opacity: .7; }
+.gold-flecks--final { opacity: .6; }
+
+.opening-scene {
+  background:
+    radial-gradient(circle at 90% 7%, rgba(255,61,158,.13), transparent 33%),
+    radial-gradient(circle at 4% 91%, rgba(255,149,204,.22), transparent 34%),
+    repeating-linear-gradient(0deg, rgba(129,0,65,.018) 0 1px, transparent 1px 4px),
+    #ffe2ef;
+}
+.opening-scene::after { border-color: rgba(214,179,106,.48); box-shadow: inset 0 0 0 5px rgba(255,255,255,.18); }
+.opening-scene .botanical::before { background: rgba(169,1,86,.45); }
+.opening-scene .botanical i { border-color: rgba(211,0,105,.48); }
+.opening-copy .eyebrow { color: var(--wine-deep); }
+.envelope { filter: drop-shadow(0 28px 28px rgba(129,0,65,.24)); }
+.envelope__back { background: linear-gradient(135deg, #ef73b3, #dc3789); }
+.envelope__flap { background: linear-gradient(150deg, #f69bc9 3%, #ea5aa4 58%, #d92b81); }
+.envelope__front--left { background: linear-gradient(140deg, #f48fc2, #e6539e); }
+.envelope__front--right { background: linear-gradient(220deg, #f68fc3, #dc3c8c); }
+.envelope__front--bottom { background: linear-gradient(175deg, #f17db7, #d73386); }
+.envelope__letter { color: var(--wine-deep); background: #fffafb; border-color: rgba(214,179,106,.74); box-shadow: 0 10px 28px rgba(129,0,65,.18), inset 0 0 0 7px rgba(255,61,158,.035); }
+.letter-name { color: var(--wine-deep); text-shadow: 0 1px 0 rgba(214,179,106,.2); }
+.letter-surname { color: var(--magenta); }
+.letter-date { color: #a47c32; }
+.open-prompt { color: var(--wine-deep); background: rgba(255,249,251,.7); border: 1px solid rgba(214,179,106,.28); }
+
+.story-scene {
+  background:
+    radial-gradient(circle at 0 100%, rgba(255,149,204,.22), transparent 36%),
+    radial-gradient(circle at 100% 0, rgba(255,61,158,.07), transparent 32%),
+    repeating-linear-gradient(90deg, rgba(169,1,86,.016) 0 1px, transparent 1px 5px),
+    var(--ivory);
+}
+.story-scene::before { border-color: rgba(214,179,106,.38); }
+.story-scene .script-title { color: var(--wine-deep); }
+.story-copy { color: #674354; }
+.date-lockup { color: var(--magenta); border-color: rgba(214,179,106,.55); }
+
+.fifteen-scene {
+  background:
+    radial-gradient(circle at 50% 31%, rgba(211,0,105,.32), transparent 47%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.018) 0 1px, transparent 1px 6px),
+    var(--wine-deep);
+}
+.fifteen-scene::before { background: radial-gradient(circle at 50% 38%, rgba(255,61,158,.16), transparent 27rem); }
+.fifteen-content h2 { color: #ffe1ef; }
+.fifteen-content > p:last-child { color: var(--champagne-light); }
+.fifteen-branch::before { background: rgba(255,103,180,.55); }
+.fifteen-branch i { border-color: rgba(255,149,204,.55); }
+.fine-frame { border-color: rgba(232,211,156,.6); }
+
+.countdown-scene {
+  background:
+    radial-gradient(circle at 100% 0, rgba(255,61,158,.11), transparent 36%),
+    radial-gradient(circle at 0 100%, rgba(255,149,204,.16), transparent 34%),
+    repeating-linear-gradient(0deg, rgba(169,1,86,.015) 0 1px, transparent 1px 5px),
+    #fff2f8;
+}
+.countdown-scene .script-kicker { color: var(--magenta); }
+.countdown-card { background: #fffdfd; border-color: rgba(214,179,106,.74); box-shadow: 0 22px 54px rgba(129,0,65,.14), inset 0 0 0 6px rgba(255,61,158,.03); }
+.countdown-card::before { border-color: rgba(169,1,86,.2); }
+.countdown-ornament { background: #fff2f8; }
+.countdown-ornament::before, .countdown-ornament::after { border-color: var(--soft-pink); }
+.countdown-grid strong { color: var(--wine-deep); }
+.countdown-grid span { color: #765263; }
+
+.event-scene {
+  background:
+    radial-gradient(circle at 0 13%, rgba(255,149,204,.18), transparent 29%),
+    radial-gradient(circle at 100% 88%, rgba(255,61,158,.08), transparent 31%),
+    var(--ivory);
+}
+.event-card { border-color: rgba(214,179,106,.58); background: radial-gradient(circle at 100% 100%, rgba(255,149,204,.18), transparent 42%), #fffdfd; box-shadow: 0 24px 58px rgba(129,0,65,.14), inset 0 0 0 8px rgba(255,61,158,.025); }
+.event-card::before { border-color: rgba(169,1,86,.16); }
+.event-date { color: var(--wine-deep); }
+.event-time { color: var(--magenta); }
+.event-details h3 { color: var(--wine-deep); }
+.event-note em { color: var(--fuchsia); }
+.button--primary { background: var(--fuchsia); box-shadow: 0 11px 25px rgba(169,1,86,.23); }
+.button--primary:hover { background: var(--hot-pink); }
+.button--secondary { color: var(--wine-deep); border-color: rgba(129,0,65,.5); background: rgba(255,255,255,.45); }
+
+.dress-scene {
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255,255,255,.5), transparent 60%),
+    radial-gradient(circle at 100% 0, rgba(255,61,158,.12), transparent 32%),
+    repeating-linear-gradient(45deg, rgba(169,1,86,.015) 0 1px, transparent 1px 6px),
+    #fbcfe4;
+}
+.dress-card { background: #fffdfd; border-color: rgba(214,179,106,.74); box-shadow: 0 25px 62px rgba(129,0,65,.16), inset 0 0 0 8px rgba(255,61,158,.028); }
+.dress-card .section-title { color: var(--wine-deep); }
+.dress-level { color: var(--fuchsia); }
+.dress-bow { color: var(--fuchsia); }
+.outfits { color: var(--wine-deep); }
+
+.letter-scene { background: radial-gradient(circle at 100% 100%, rgba(255,149,204,.2), transparent 37%), radial-gradient(circle at 0 5%, rgba(255,61,158,.07), transparent 30%), var(--ivory); }
+.letter-paper { background: #fffdfd; border-color: rgba(214,179,106,.58); box-shadow: 0 25px 62px rgba(129,0,65,.13), inset 0 0 0 7px rgba(255,61,158,.028); }
+.letter-number { color: rgba(211,0,105,.07); }
+.letter-paper .script-kicker, .signature { color: var(--fuchsia); }
+
+.gift-scene {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(211,0,105,.3), transparent 42%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.018) 0 1px, transparent 1px 7px),
+    var(--wine-deep);
+}
+.gift-scene .section-title { color: #ffe4f1; }
+.gift-copy { color: #ffd2e7; }
+
+.rsvp-scene { background: radial-gradient(circle at 50% 100%, rgba(255,61,158,.15), transparent 38%), #fbcce3; }
+.rsvp-frame { background: #fffdfd; border-color: rgba(214,179,106,.68); box-shadow: 0 24px 58px rgba(129,0,65,.15), inset 0 0 0 7px rgba(255,61,158,.03); }
+.rsvp-frame .section-title { color: var(--wine-deep); }
+
+.finale-scene {
+  background:
+    radial-gradient(circle at 50% 43%, rgba(255,255,255,.98), transparent 48%),
+    radial-gradient(circle at 100% 0, rgba(255,61,158,.12), transparent 32%),
+    radial-gradient(circle at 0 100%, rgba(255,149,204,.22), transparent 35%),
+    repeating-linear-gradient(0deg, rgba(169,1,86,.014) 0 1px, transparent 1px 5px),
+    #ffe3f0;
+}
+.finale-monogram { color: var(--champagne); border-color: var(--champagne); background: rgba(255,253,253,.58); }
+.finale-content .script-title, .final-wait { color: var(--magenta); }
+.finale-xv { color: var(--wine-deep); }
+.music-control { background: rgba(129,0,65,.92); box-shadow: 0 8px 24px rgba(129,0,65,.25); }
 
 @media (min-width: 560px) {
   .invitation-shell { margin-block: 2rem; border-radius: 4px; }
